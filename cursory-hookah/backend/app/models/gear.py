@@ -15,6 +15,7 @@ class Gear(db.Model):
     compatibility_tags = db.Column(db.JSON)  # Store compatibility info as JSON
     rating = db.Column(db.Float, default=0.0)
     review_count = db.Column(db.Integer, default=0)
+    source_website = db.Column(db.String(100))  # Track which website the product came from
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
@@ -33,6 +34,7 @@ class Gear(db.Model):
             'compatibility_tags': self.compatibility_tags or [],
             'rating': self.rating,
             'review_count': self.review_count,
+            'source_website': self.source_website,
             'created_at': self.created_at.isoformat() if self.created_at else None,
             'updated_at': self.updated_at.isoformat() if self.updated_at else None
         }

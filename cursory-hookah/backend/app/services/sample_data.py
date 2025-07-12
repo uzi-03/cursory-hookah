@@ -13,7 +13,7 @@ def initialize_sample_data():
             'model': 'Classic',
             'description': 'Traditional Egyptian hookah with brass construction',
             'price': 89.99,
-            'image_url': 'https://example.com/km-classic.jpg',
+            'image_url': 'https://via.placeholder.com/400x300/667eea/ffffff?text=Khalil+Mamoon+Classic',
             'product_url': 'https://example.com/km-classic',
             'specifications': {
                 'height': '28 inches',
@@ -23,7 +23,8 @@ def initialize_sample_data():
             },
             'compatibility_tags': ['standard_hose', 'egyptian_bowl', 'wide_base'],
             'rating': 4.5,
-            'review_count': 127
+            'review_count': 127,
+            'source_website': 'sample_data'
         },
         {
             'name': 'Shika Hookah',
@@ -32,7 +33,7 @@ def initialize_sample_data():
             'model': 'V4',
             'description': 'Modern hookah with advanced features',
             'price': 149.99,
-            'image_url': 'https://example.com/shika-v4.jpg',
+            'image_url': 'https://via.placeholder.com/400x300/764ba2/ffffff?text=Shika+Hookah+V4',
             'product_url': 'https://example.com/shika-v4',
             'specifications': {
                 'height': '32 inches',
@@ -42,7 +43,8 @@ def initialize_sample_data():
             },
             'compatibility_tags': ['modern_hose', 'phunnel_bowl', 'wide_base', 'multi_port'],
             'rating': 4.7,
-            'review_count': 89
+            'review_count': 89,
+            'source_website': 'sample_data'
         },
         
         # Bowls
@@ -53,7 +55,7 @@ def initialize_sample_data():
             'model': 'Lotus',
             'description': 'Premium ceramic bowl designed for heat management',
             'price': 34.99,
-            'image_url': 'https://example.com/kaloud-lotus.jpg',
+            'image_url': 'https://via.placeholder.com/400x300/27ae60/ffffff?text=Kaloud+Lotus+Bowl',
             'product_url': 'https://example.com/kaloud-lotus',
             'specifications': {
                 'material': 'ceramic',
@@ -63,7 +65,8 @@ def initialize_sample_data():
             },
             'compatibility_tags': ['kaloud_lotus_hmd', 'ceramic', 'heat_management'],
             'rating': 4.8,
-            'review_count': 234
+            'review_count': 234,
+            'source_website': 'sample_data'
         },
         {
             'name': 'Egyptian Clay Bowl',
@@ -72,7 +75,7 @@ def initialize_sample_data():
             'model': 'Egyptian',
             'description': 'Classic Egyptian clay bowl for traditional smoking',
             'price': 12.99,
-            'image_url': 'https://example.com/egyptian-bowl.jpg',
+            'image_url': 'https://via.placeholder.com/400x300/f39c12/ffffff?text=Egyptian+Clay+Bowl',
             'product_url': 'https://example.com/egyptian-bowl',
             'specifications': {
                 'material': 'clay',
@@ -82,7 +85,8 @@ def initialize_sample_data():
             },
             'compatibility_tags': ['traditional', 'clay', 'foil'],
             'rating': 4.2,
-            'review_count': 156
+            'review_count': 156,
+            'source_website': 'sample_data'
         },
         
         # Heat Management Devices
@@ -93,7 +97,7 @@ def initialize_sample_data():
             'model': 'Lotus 1+',
             'description': 'Advanced heat management device with temperature control',
             'price': 89.99,
-            'image_url': 'https://example.com/kaloud-lotus-hmd.jpg',
+            'image_url': 'https://via.placeholder.com/400x300/e74c3c/ffffff?text=Kaloud+Lotus+1%2B',
             'product_url': 'https://example.com/kaloud-lotus-hmd',
             'specifications': {
                 'material': 'stainless_steel',
@@ -103,7 +107,8 @@ def initialize_sample_data():
             },
             'compatibility_tags': ['kaloud_lotus_bowl', 'stainless_steel', 'temperature_control'],
             'rating': 4.9,
-            'review_count': 445
+            'review_count': 445,
+            'source_website': 'sample_data'
         },
         {
             'name': 'Provost Heat Management',
@@ -112,7 +117,7 @@ def initialize_sample_data():
             'model': 'Standard',
             'description': 'Foil-based heat management device',
             'price': 24.99,
-            'image_url': 'https://example.com/provost-hmd.jpg',
+            'image_url': 'https://via.placeholder.com/400x300/9b59b6/ffffff?text=Provost+HMD',
             'product_url': 'https://example.com/provost-hmd',
             'specifications': {
                 'material': 'stainless_steel',
@@ -122,7 +127,8 @@ def initialize_sample_data():
             },
             'compatibility_tags': ['foil_compatible', 'traditional_bowl', 'stainless_steel'],
             'rating': 4.6,
-            'review_count': 178
+            'review_count': 178,
+            'source_website': 'sample_data'
         },
         
         # Hoses
@@ -133,7 +139,7 @@ def initialize_sample_data():
             'model': 'Aluminum',
             'description': 'Washable silicone hose with aluminum handle',
             'price': 39.99,
-            'image_url': 'https://example.com/dhose-aluminum.jpg',
+            'image_url': 'https://via.placeholder.com/400x300/34495e/ffffff?text=D-Hose+Aluminum',
             'product_url': 'https://example.com/dhose-aluminum',
             'specifications': {
                 'material': 'silicone',
@@ -143,7 +149,8 @@ def initialize_sample_data():
             },
             'compatibility_tags': ['washable', 'silicone', 'modern_hookah'],
             'rating': 4.7,
-            'review_count': 203
+            'review_count': 203,
+            'source_website': 'sample_data'
         },
         {
             'name': 'Traditional Leather Hose',
@@ -152,7 +159,7 @@ def initialize_sample_data():
             'model': 'Leather',
             'description': 'Classic leather hose for traditional smoking',
             'price': 19.99,
-            'image_url': 'https://example.com/leather-hose.jpg',
+            'image_url': 'https://via.placeholder.com/400x300/95a5a6/ffffff?text=Leather+Hose',
             'product_url': 'https://example.com/leather-hose',
             'specifications': {
                 'material': 'leather',
@@ -162,7 +169,8 @@ def initialize_sample_data():
             },
             'compatibility_tags': ['traditional', 'leather', 'egyptian_hookah'],
             'rating': 4.1,
-            'review_count': 92
+            'review_count': 92,
+            'source_website': 'sample_data'
         }
     ]
     

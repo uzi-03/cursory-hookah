@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Gear, UserGear, ApiResponse, RecommendationsResponse, ScrapingStatus, FilterOptions } from '../types';
+import { Gear, UserGear, ApiResponse, RecommendationsResponse, ScrapingStatus, FilterOptions, Website } from '../types';
 
 const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
 
@@ -72,13 +72,21 @@ export const recommendationsApi = {
 
 // Scraper API calls
 export const scraperApi = {
-  triggerScraping: async (website?: string): Promise<ApiResponse<{ products_found: number; website: string }>> => {
-    const response = await api.post('/scraper/trigger', { website: website || 'demo' });
+  triggerScraping: async (website?: string, category?: string): Promise<ApiResponse<{ products_found: number; website: string; category?: string; details?: any }>> => {
+    const response = await api.post('/scraper/trigger', { 
+      website: website || 'demo',
+      category: category
+    });
     return response.data;
   },
 
   getStatus: async (): Promise<ApiResponse<ScrapingStatus>> => {
     const response = await api.get('/scraper/status');
+    return response.data;
+  },
+
+  getWebsites: async (): Promise<ApiResponse<Website[]>> => {
+    const response = await api.get('/scraper/websites');
     return response.data;
   },
 }; 

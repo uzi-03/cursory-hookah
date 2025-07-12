@@ -1,18 +1,21 @@
 import React from 'react';
 import { Gear } from '../types';
+import ProductImage from './ProductImage';
 
 interface GearCardProps {
   gear: Gear;
   onAddToCollection?: (gearId: number) => void;
   onRemoveFromCollection?: (gearId: number) => void;
   isInCollection?: boolean;
+  showSource?: boolean;
 }
 
 const GearCard: React.FC<GearCardProps> = ({ 
   gear, 
   onAddToCollection, 
   onRemoveFromCollection, 
-  isInCollection = false 
+  isInCollection = false,
+  showSource = false
 }) => {
   const renderStars = (rating: number) => {
     const stars = [];
@@ -38,16 +41,22 @@ const GearCard: React.FC<GearCardProps> = ({
   return (
     <div className="gear-item">
       <div className="gear-image">
-        {gear.image_url ? (
-          <img src={gear.image_url} alt={gear.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-        ) : (
-          <span>No Image Available</span>
-        )}
+        <ProductImage 
+          src={gear.image_url} 
+          alt={gear.name}
+          style={{ width: '100%', height: '100%' }}
+        />
       </div>
       
       <div className="gear-content">
         <h3 className="gear-title">{gear.name}</h3>
         <p className="gear-brand">{gear.brand}</p>
+        
+        {showSource && gear.source_website && (
+          <p className="gear-source" style={{ fontSize: '0.8rem', color: '#666', marginBottom: '0.5rem' }}>
+            From: {gear.source_website}
+          </p>
+        )}
         
         {gear.price && (
           <p className="gear-price">${gear.price.toFixed(2)}</p>

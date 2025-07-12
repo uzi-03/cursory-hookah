@@ -25,7 +25,7 @@ class HookahScraper:
                 'model': 'Premium',
                 'description': 'Premium hookah from Hookah-Shisha.com',
                 'price': 129.99,
-                'image_url': 'https://example.com/hookah-shisha-premium.jpg',
+                'image_url': 'https://via.placeholder.com/400x300/667eea/ffffff?text=Hookah-Shisha+Premium',
                 'product_url': 'https://hookah-shisha.com/premium-hookah',
                 'specifications': {
                     'height': '30 inches',
@@ -43,7 +43,7 @@ class HookahScraper:
                 'model': 'Premium',
                 'description': 'Premium bowl from 5StarHookah.com',
                 'price': 24.99,
-                'image_url': 'https://example.com/5star-bowl.jpg',
+                'image_url': 'https://via.placeholder.com/400x300/27ae60/ffffff?text=5Star+Bowl',
                 'product_url': 'https://5starhookah.com/premium-bowl',
                 'specifications': {
                     'material': 'ceramic',

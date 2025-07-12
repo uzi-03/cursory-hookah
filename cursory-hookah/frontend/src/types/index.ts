@@ -12,6 +12,7 @@ export interface Gear {
   compatibility_tags?: string[];
   rating: number;
   review_count: number;
+  source_website?: string;
   created_at?: string;
   updated_at?: string;
 }
@@ -44,7 +45,15 @@ export interface ScrapingStatus {
   total_products: number;
   categories: number;
   brands: number;
+  websites: number;
   last_updated: string;
+}
+
+export interface Website {
+  name: string;
+  display_name: string;
+  url: string;
+  categories: string[];
 }
 
 export interface FilterOptions {

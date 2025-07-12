@@ -3,6 +3,7 @@ import { Gear, UserGear, FilterOptions } from './types';
 import { gearApi, userApi, recommendationsApi } from './services/api';
 import GearCard from './components/GearCard';
 import GearFilters from './components/GearFilters';
+import ScraperManager from './components/ScraperManager';
 
 function App() {
   const [allGear, setAllGear] = useState<Gear[]>([]);
@@ -11,7 +12,7 @@ function App() {
   const [filters, setFilters] = useState<FilterOptions>({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState<'browse' | 'collection' | 'recommendations'>('browse');
+  const [activeTab, setActiveTab] = useState<'browse' | 'collection' | 'recommendations' | 'scraper'>('browse');
 
   useEffect(() => {
     loadInitialData();
@@ -141,6 +142,7 @@ function App() {
             onAddToCollection={handleAddToCollection}
             onRemoveFromCollection={handleRemoveFromCollection}
             isInCollection={isInCollection(gear.id)}
+            showSource={true}
           />
         ))}
       </div>
@@ -179,6 +181,12 @@ function App() {
               onClick={() => setActiveTab('recommendations')}
             >
               Recommendations
+            </button>
+            <button
+              className={`btn ${activeTab === 'scraper' ? '' : 'btn-secondary'}`}
+              onClick={() => setActiveTab('scraper')}
+            >
+              🕷️ Scraper
             </button>
           </div>
 
@@ -224,6 +232,9 @@ function App() {
 
           {/* Recommendations */}
           {activeTab === 'recommendations' && renderGearList(recommendations, 'Recommendations')}
+
+          {/* Scraper Manager */}
+          {activeTab === 'scraper' && <ScraperManager />}
         </div>
       </main>
     </div>
